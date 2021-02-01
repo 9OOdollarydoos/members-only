@@ -11,6 +11,24 @@
   </head>
 
   <body>
+    
+    <nav id=nav-main>
+      <div id=nav-logo>
+        <a href="...">
+        <%= image_tag("shh.jpeg", size: 50, :alt =>"members-only icon") %>
+        </a>
+        <p>Members Only</p>
+      </div>
+      <div id=nav-links>
+      <ul>      
+      <li><a class="ralign" href="...">Login</a></li>
+      <li><a class="ralign" href="...">Logout</a></li>
+      <li><a class="ralign" href="...">Settings</a></li>
+      </ul>
+      </div>
+    </nav>
+    
+
     <%= yield %>
   </body>
 </html>
