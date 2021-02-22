@@ -1,4 +1,5 @@
 class SecretsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   
 
   def index
@@ -9,10 +10,12 @@ class SecretsController < ApplicationController
   end
 
   def new
+      before_action :authenticate_user!
       @secret = Secret.new
   end
 
   def create
+    before_action :authenticate_user!
     @secret = Secret.new(secret_params)
 
     if @secret.save

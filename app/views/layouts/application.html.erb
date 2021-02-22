@@ -12,9 +12,7 @@
 
   <body>
 
-  <!-- flash message -->
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  
     
     <nav id=nav-main>
       <div id=nav-logo>
@@ -25,12 +23,16 @@
       </div>
       <div id=nav-links>
       <ul>      
-      <li><a class="ralign" href="...">Login</a></li>
-      <li><a class="ralign" href="...">Logout</a></li>
-      <li><a class="ralign" href="...">Settings</a></li>
+      <li><%= link_to 'Login', new_user_session_path %></li>
+      <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+      <li><%= link_to 'Settings', edit_user_registration_path %></li>
       </ul>
       </div>
     </nav>
+
+    <!-- flash message -->
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
     
 
     <%= yield %>
