@@ -4,6 +4,8 @@ class SecretsController < ApplicationController
   def index
     @secrets = Secret.all
 
+    @secret = Secret.new
+
   end
 
   def new
