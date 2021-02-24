@@ -26,9 +26,13 @@ nav div {
     display: inline; 
 }
 
-nav img {
+.logo {
     float: left;
     margin-left: 15px;
+}
+
+.logo img {
+  width: 50px;
 }
 
 #nav-links {

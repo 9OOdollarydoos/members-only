@@ -10,16 +10,14 @@ class SecretsController < ApplicationController
   end
 
   def new
-      before_action :authenticate_user!
-      @secret = Secret.new
+      @secret = current_user.secrets.new
   end
 
   def create
-    before_action :authenticate_user!
-    @secret = Secret.new(secret_params)
+    @secret = current_user.secrets.new(secret_params)
 
     if @secret.save
-        redirect_to @secret
+        redirect_to root_path, notice: 'Secret posted successfully.'
     else 
         render :new
     end

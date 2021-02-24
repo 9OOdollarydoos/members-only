@@ -16,9 +16,8 @@
     
     <nav id=nav-main>
       <div id=nav-logo>
-        <a href="...">
-        <%= image_tag("shh.jpeg", size: 50, :alt =>"members-only icon") %>
-        </a>
+        
+        <%= link_to image_tag('shh.jpeg'), root_path, :class => "logo" %>
         <p>Members Only</p>
       </div>
       <div id=nav-links>
